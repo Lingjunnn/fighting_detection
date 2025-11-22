@@ -1,0 +1,5 @@
+# 数据集
+/data/datasets/
+
+# 模型
+/models/yolov8s.pt
