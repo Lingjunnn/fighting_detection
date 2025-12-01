@@ -44,7 +44,7 @@ def process_and_save_frames(source_folder, output_folder, target_length=20):
 
 # --- 使用示例 ---
 # 请修改为你的实际路径
-source_dir = "../data/datasets/movieFights/noFights"  # 存放视频的文件夹
-output_dir = "../data/datasets/movieFights/frames/noFights"  # 存放结果图片的文件夹
+source_dir = "../data/datasets/RWF2000/fights"  # 存放视频的文件夹
+output_dir = "../data/datasets/RWF2000/frames/fights"  # 存放结果图片的文件夹
 
 process_and_save_frames(source_dir, output_dir, target_length=20)

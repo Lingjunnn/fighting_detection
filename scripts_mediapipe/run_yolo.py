@@ -50,7 +50,7 @@ def main():
     model = YOLO(args.model)
 
     splits = ["train", "val"]
-    classes = ["Fight", "NonFight"]
+    classes = ["fights", "noFights"]
 
     for split in splits:
         for clazz in classes:

@@ -121,7 +121,7 @@ def main():
     args = parser.parse_args()
 
     splits = ["train", "val"]
-    classes = ["Fight", "NonFight"]
+    classes = ["fights", "noFights"]
 
     for split in splits:
         for clazz in classes:

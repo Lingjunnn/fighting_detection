@@ -75,14 +75,14 @@ def main():
 
     # NEW: independent limits for train and val
     parser.add_argument("--max_train", type=int, default=16,
-                        help="Max videos per class for TRAIN (Fight & NonFight)")
+                        help="Max videos per class for TRAIN (fights & noFights)")
     parser.add_argument("--max_val", type=int, default=40,
-                        help="Max videos per class for VAL (Fight & NonFight)")
+                        help="Max videos per class for VAL (fights & noFights)")
 
     args = parser.parse_args()
 
     splits = ["train", "val"]
-    classes = ["Fight", "NonFight"]
+    classes = ["fights", "noFights"]
 
     for split in splits:
         print(f"\n=== Processing {split} split ===")

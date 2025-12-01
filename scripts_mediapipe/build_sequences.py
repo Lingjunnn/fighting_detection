@@ -37,12 +37,12 @@ def make_sequences(split_path, seq_len, stride):
     """Return X, y for a data split."""
     X, y = [], []
 
-    fight_dir = os.path.join(split_path, "Fight")
-    nonfight_dir = os.path.join(split_path, "NonFight")
+    fight_dir = os.path.join(split_path, "fights")
+    nonfight_dir = os.path.join(split_path, "noFights")
 
-    # --- Fight ---
+    # --- fights ---
     for npy_file in tqdm(sorted(glob(os.path.join(fight_dir, "*.npy"))),
-                         desc="Fight", leave=False):
+                         desc="fights", leave=False):
         seq = load_keypoints(npy_file)
         if seq is None:
             continue
@@ -55,9 +55,9 @@ def make_sequences(split_path, seq_len, stride):
             X.append(seq[start:start + seq_len])
             y.append(1)
 
-    # --- NonFight ---
+    # --- noFights ---
     for npy_file in tqdm(sorted(glob(os.path.join(nonfight_dir, "*.npy"))),
-                         desc="NonFight", leave=False):
+                         desc="noFights", leave=False):
         seq = load_keypoints(npy_file)
         if seq is None:
             continue
